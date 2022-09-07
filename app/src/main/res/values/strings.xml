@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Nav App</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Commands-->
+    <string name="pause_command">AT#PS</string>
+    <string name="start_command">AT#ST</string>
+    <string name="power_off_command">AT#OF</string>
+    <string name="change_mode_1_command">AT#M1</string>
+    <string name="change_mode_2_command">AT#M2</string>
+    <string name="change_intensity_1_command">AT#I1</string>
+    <string name="change_intensity_2_command">AT#I2</string>
+    <string name="change_intensity_3_command">AT#I3</string>
+</resources>

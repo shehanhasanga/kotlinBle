@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:text="Spring"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/deviceIdtxt"
+                    android:text="Control the device"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/connectbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Viewdevice" />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="20dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:layout_height="0dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PATTERNS"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:id="@+id/pulsalated"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="P"
+                            android:textColor="@color/white"
+                            android:textSize="50sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="Pulsalated"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                  <RelativeLayout
+                      android:layout_width="70dp"
+                      android:id="@+id/graduated"
+                      android:layout_height="70dp"
+                      android:layout_gravity="center"
+                      android:background="@drawable/circle">
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_centerInParent="true"
+                          android:text="G"
+                          android:textColor="@color/white"
+                          android:textSize="50sp"
+                          android:textStyle="bold" />
+                  </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="Graduated"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pressure Values"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="20dp"
+                        android:layout_height="0dp"
+                        android:id="@+id/topcolor"
+                        android:layout_weight="1"
+                        android:alpha="0.1"
+                        android:background="@color/sensor_max"/>
+                    <RelativeLayout
+                        android:layout_width="20dp"
+                        android:id="@+id/midcoloer"
+                        android:layout_height="0dp"
+                        android:alpha="0.2"
+                        android:layout_weight="1"
+                        android:background="@color/sensor_max"/>
+                    <RelativeLayout
+                        android:layout_width="20dp"
+                        android:id="@+id/lowcolor"
+                        android:layout_height="0dp"
+                        android:alpha="0.4"
+                        android:layout_weight="1"
+                        android:background="@color/sensor_max"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:id="@+id/topval"
+                                        android:layout_height="wrap_content"
+                                        android:text="0.0"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" mmHg"
+                                        />
+                                </LinearLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:text="Top Zone"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:id="@+id/midval"
+                                        android:layout_height="wrap_content"
+                                        android:text="0.0"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" mmHg"
+                                        />
+                                </LinearLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mid Zone"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:id="@+id/lowval"
+                                        android:layout_height="wrap_content"
+                                        android:text="0.0"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" mmHg"
+                                        />
+                                </LinearLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:text="Top Zone"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+                                <RelativeLayout
+                                    android:layout_width="60dp"
+                                    android:id="@+id/poweroff"
+                                    android:layout_gravity="center"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/circle">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/power"
+                                        app:tint="@color/white" />
+                                </RelativeLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:text="Power Off"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+                                <RelativeLayout
+                                    android:layout_width="100dp"
+                                    android:id="@+id/start"
+                                    android:layout_height="100dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/circle">
+
+                                    <ImageView
+                                        android:id="@+id/startimage"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/play"
+                                        app:tint="@color/white" />
+                                </RelativeLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/startTxt"
+                                    android:text="Start"
+                                    android:layout_gravity="center"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/elapsetime"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:text="00.00"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:text=" Elapsed"/>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="intensity"/>
+            <SeekBar
+                android:id="@+id/seekBar"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:max="2"
+                android:progress="0"
+                android:thumb="@drawable/thumb_image"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</FrameLayout>

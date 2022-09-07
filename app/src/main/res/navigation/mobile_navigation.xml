@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.shehan.navapp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_scandeviceFragmant"
+            app:destination="@id/scandeviceFragmant" />
+        <action
+            android:id="@+id/action_navigation_home_to_deviceDetailsFragment"
+            app:destination="@id/deviceDetailsFragment" >
+            <argument
+                android:name="deviceId"
+                app:argType="string"
+                android:defaultValue="deviceId" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.shehan.navapp.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.shehan.navapp.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/scandeviceFragmant"
+        android:name="com.shehan.navapp.ui.ScandeviceFragmant"
+        android:label="fragment_scandevice_fragmant"
+        tools:layout="@layout/fragment_scandevice_fragmant" />
+    <fragment
+        android:id="@+id/deviceDetailsFragment"
+        android:name="com.shehan.navapp.ui.devicedetails.DeviceDetailsFragment"
+        android:label="DeviceDetailsFragment" >
+        <action
+            android:id="@+id/action_deviceDetailsFragment_to_sesionFragment"
+            app:destination="@id/sesionFragment" >
+            <argument
+                android:name="deviceId"
+                app:argType="string"
+                android:defaultValue="deviceId" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/sesionFragment"
+        android:name="com.shehan.navapp.ui.session.SesionFragment"
+        android:label="fragment_sesion"
+        tools:layout="@layout/fragment_sesion" />
+</navigation>
